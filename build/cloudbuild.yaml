@@ -1,0 +1,18 @@
+steps:
+  # Dump ENV
+  - name: 'ubuntu'
+    id: debug
+    entrypoint: sh
+    args:
+      - '-c'
+      - printenv
+    # add default substitutions to env
+    env:
+      - 'PROJECT_ID=$PROJECT_ID'
+      - 'BUILD_ID=$BUILD_ID'
+      - 'COMMIT_SHA=$COMMIT_SHA'
+      - 'SHORT_SHA=$SHORT_SHA'
+      - 'REPO_NAME=$REPO_NAME'
+      - 'BRANCH_NAME=$BRANCH_NAME'
+      - 'TAG_NAME=$TAG_NAME'
+      - 'REVISION_ID=$REVISION_ID'
